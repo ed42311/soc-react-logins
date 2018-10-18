@@ -82,14 +82,17 @@ class App extends Component {
             (
                 <div>
                     <TwitterLogin
-                      loginUrl="http://localhost:4000/api/v1/auth/twitter"
-                            onFailure={this.onFailure} onSuccess={this.twitterResponse}
-                                   requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"/>
+                        loginUrl="http://localhost:4000/api/v1/auth/twitter"
+                        onFailure={this.onFailure}
+                        onSuccess={this.twitterResponse}
+                        requestTokenUrl="http://localhost:4000/api/v1/auth/twitter/reverse"
+                      />
                     <FacebookLogin
                         appId={config.FACEBOOK_APP_ID}
                         autoLoad={false}
                         fields="name,email,picture"
-                        callback={this.facebookResponse} />
+                        callback={this.facebookResponse}
+                    />
                     <GoogleLogin
                         clientId={config.GOOGLE_CLIENT_ID}
                         onSuccess={this.googleResponse}
